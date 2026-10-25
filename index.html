@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>القيادة الإدارية ودورها في تحسين أداء الموظفين | مزوار وفاء</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Cairo', sans-serif; background: #faf7f0; color: #1a0f08; line-height: 1.8; }
+html { scroll-behavior: smooth; }
+
+/* الألوان */
+:root {
+  --navy: #0d1b2a;
+  --navy-light: #1b2d4a;
+  --gold: #c9a961;
+  --gold-light: #f0d589;
+  --cream: #faf7f0;
+  --cream-dark: #f5ecd9;
+  --brown: #5a4a35;
+}
+
+/* شريط التنقل */
+nav {
+  position: fixed; top: 0; right: 0; left: 0; z-index: 100;
+  padding: 20px 0; transition: all 0.3s;
+}
+nav.scrolled {
+  background: rgba(13, 27, 42, 0.95);
+  backdrop-filter: blur(15px);
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(201, 169, 97, 0.3);
+}
+.nav-container {
+  max-width: 1200px; margin: 0 auto; padding: 0 24px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 12px;
+}
+.nav-logo-icon {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: linear-gradient(135deg, #c9a961, #f0d589);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; color: #0d1b2a;
+}
+.nav-logo-text {
+  font-family: 'Amiri', serif; font-size: 20px; font-weight: 700; color: #c9a961;
+}
+.nav-links { display: flex; gap: 8px; list-style: none; }
+.nav-links a {
+  padding: 8px 16px; border-radius: 8px; color: #faf7f0;
+  text-decoration: none; font-size: 14px; transition: all 0.3s;
+}
+.nav-links a:hover { background: rgba(201, 169, 97, 0.2); }
+
+/* القسم الرئيسي */
+.hero {
+  min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden; text-align: center; padding: 100px 24px 60px;
+  background: linear-gradient(135deg, #0a0f1c 0%, #0d1b2a 30%, #1b2d4a 70%, #0a0f1c 100%);
+}
+.hero-frame {
+  position: absolute; top: 32px; right: 32px; bottom: 32px; left: 32px;
+  border: 2px solid rgba(201, 169, 97, 0.3); border-radius: 8px; pointer-events: none;
+}
+.hero-content { position: relative; z-index: 10; max-width: 900px; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px; padding: 8px 20px;
+  border-radius: 999px; background: rgba(201, 169, 97, 0.1);
+  border: 1px solid rgba(201, 169, 97, 0.3); margin-bottom: 32px;
+  color: #f0d589; font-size: 14px;
+}
+.hero-institution { color: #f0d589; font-size: 18px; margin-bottom: 8px; }
+.hero-institute-name { color: rgba(250, 247, 240, 0.8); font-size: 15px; margin-bottom: 40px; }
+.hero-ornament { margin-bottom: 24px; color: #c9a961; font-size: 28px; }
+.hero-title {
+  font-family: 'Amiri', serif; font-size: clamp(48px, 8vw, 96px); font-weight: 700;
+  margin-bottom: 24px; line-height: 1.2;
+  background: linear-gradient(90deg, #c9a961 0%, #f0d589 25%, #fff5d6 50%, #f0d589 75%, #c9a961 100%);
+  background-size: 200% auto; -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; animation: shimmer 3s linear infinite;
+}
+@keyframes shimmer { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+.hero-subtitle {
+  font-family: 'Amiri', serif; font-size: clamp(24px, 4vw, 48px);
+  color: #faf7f0; margin-bottom: 48px;
+}
+.hero-info { display: flex; flex-wrap: wrap; justify-content: center; gap: 48px; margin-bottom: 48px; }
+.hero-info-item { text-align: center; }
+.hero-info-label { color: #c9a961; font-size: 14px; margin-bottom: 4px; }
+.hero-info-value { color: #faf7f0; font-family: 'Amiri', serif; font-size: 24px; font-weight: 700; }
+.hero-info-divider { width: 1px; background: rgba(201, 169, 97, 0.3); }
+.hero-btn {
+  display: inline-flex; align-items: center; gap: 8px; padding: 16px 32px;
+  border-radius: 999px; border: none; cursor: pointer;
+  background: linear-gradient(135deg, #c9a961, #f0d589);
+  color: #0d1b2a; font-family: 'Cairo', sans-serif; font-size: 16px; font-weight: 600;
+  box-shadow: 0 10px 30px rgba(201, 169, 97, 0.4); text-decoration: none;
+}
+
+/* الأقسام العامة */
+section { padding: 96px 24px; }
+.section-container { max-width: 1100px; margin: 0 auto; }
+.section-title { text-align: center; margin-bottom: 64px; }
+.section-ornament { color: #c9a961; font-size: 24px; margin-bottom: 16px; }
+.section-title h2 {
+  font-family: 'Amiri', serif; font-size: 48px; font-weight: 700; margin-bottom: 16px;
+}
+.section-title p { font-size: 18px; color: #5a4a35; }
+
+/* قسم عن المذكرة */
+.about { background: linear-gradient(180deg, #faf7f0 0%, #f5ecd9 100%); }
+.about-card {
+  background: white; border-radius: 16px; padding: 48px; margin-bottom: 48px;
+  border: 1px solid #e6d9b8; box-shadow: 0 20px 60px -15px rgba(13, 27, 42, 0.1);
+}
+.about-card p { font-size: 18px; line-height: 1.8; margin-bottom: 16px; text-align: justify; }
+.about-card p:last-child { color: #5a4a35; font-size: 16px; }
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
+.feature {
+  background: white; border-radius: 16px; padding: 24px; text-align: center;
+  border: 1px solid #e6d9b8; transition: transform 0.3s;
+}
+.feature:hover { transform: translateY(-5px); }
+.feature-icon { font-size: 40px; margin-bottom: 12px; }
+.feature h3 { font-family: 'Amiri', serif; font-size: 20px; font-weight: 700; color: #0d1b2a; margin-bottom: 12px; }
+.feature p { color: #5a4a35; font-size: 14px; line-height: 1.6; }
+
+/* قسم الفصول */
+.chapters { background: linear-gradient(180deg, #0d1b2a 0%, #0a0f1c 100%); color: #faf7f0; }
+.chapters .section-title h2 {
+  background: linear-gradient(90deg, #c9a961, #f0d589, #c9a961);
+  background-size: 200% auto; -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; animation: shimmer 3s linear infinite;
+}
+.chapters .section-title p { color: rgba(250, 247, 240, 0.8); }
+.chapter-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-bottom: 48px; }
+.chapter-tab {
+  padding: 12px 24px; border-radius: 12px; cursor: pointer; font-family: 'Cairo', sans-serif;
+  font-weight: 600; transition: all 0.3s; background: rgba(201, 169, 97, 0.1);
+  color: #faf7f0; border: 1px solid rgba(201, 169, 97, 0.3);
+}
+.chapter-tab.active {
+  background: linear-gradient(135deg, #c9a961, #f0d589);
+  color: #0d1b2a; border: none;
+}
+.chapter-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 32px; }
+.chapter-card {
+  background: rgba(13, 27, 42, 0.6); border-radius: 16px; padding: 32px;
+  border: 1px solid rgba(201, 169, 97, 0.3);
+}
+.chapter-card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+.chapter-card-num {
+  width: 48px; height: 48px; border-radius: 12px;
+  background: linear-gradient(135deg, #c9a961, #f0d589);
+  display: flex; align-items: center; justify-content: center;
+  color: #0d1b2a; font-weight: 700; font-size: 20px;
+}
+.chapter-card h3 { font-family: 'Amiri', serif; font-size: 20px; font-weight: 700; color: #c9a961; }
+.chapter-card ul { list-style: none; }
+.chapter-card li {
+  display: flex; align-items: flex-start; gap: 12px; padding: 12px; border-radius: 8px;
+  margin-bottom: 8px; color: #faf7f0; font-size: 14px;
+}
+.chapter-card li span { color: #c9a961; margin-top: 4px; }
+
+/* قسم المعهد */
+.institute { background: linear-gradient(180deg, #f5ecd9 0%, #faf7f0 100%); }
+.institute-images { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-bottom: 48px; }
+.institute-img {
+  border-radius: 16px; overflow: hidden; border: 2px solid #c9a961;
+  box-shadow: 0 10px 40px -10px rgba(201, 169, 97, 0.5);
+}
+.institute-img img { width: 100%; height: 320px; object-fit: cover; display: block; }
+.institute-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
+.info-card {
+  background: white; border-radius: 16px; padding: 24px; text-align: center;
+  border: 1px solid #e6d9b8;
+}
+.info-icon { font-size: 32px; margin-bottom: 12px; }
+.info-card h3 { font-family: 'Amiri', serif; font-size: 18px; font-weight: 700; color: #0d1b2a; margin-bottom: 8px; }
+.info-card p { color: #5a4a35; font-size: 14px; }
+.company-box {
+  display: inline-block; padding: 24px 32px; border-radius: 16px; margin-top: 48px;
+  background: linear-gradient(135deg, #0d1b2a, #1b2d4a); border: 1px solid #c9a961; text-align: center;
+}
+.company-box p { color: #c9a961; font-size: 14px; margin-bottom: 8px; }
+.company-box h3 { font-family: 'Amiri', serif; font-size: 28px; font-weight: 700; color: #f0d589; }
+
+/* قسم الباحثة */
+.author { background: linear-gradient(180deg, #0a0f1c 0%, #0d1b2a 100%); color: #faf7f0; text-align: center; }
+.author .section-title h2 {
+  background: linear-gradient(90deg, #c9a961, #f0d589, #c9a961);
+  background-size: 200% auto; -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; animation: shimmer 3s linear infinite;
+}
+.author-card {
+  background: rgba(13, 27, 42, 0.6); border-radius: 24px; padding: 48px; text-align: center;
+  border: 2px solid rgba(201, 169, 97, 0.3); margin-bottom: 32px; max-width: 700px; margin-left: auto; margin-right: auto;
+}
+.author-avatar {
+  width: 120px; height: 120px; margin: 0 auto 24px; border-radius: 50%;
+  background: linear-gradient(135deg, #c9a961, #f0d589);
+  display: flex; align-items: center; justify-content: center; font-size: 60px;
+}
+.author-card p { color: #c9a961; font-size: 14px; margin-bottom: 8px; }
+.author-card h3 {
+  font-family: 'Amiri', serif; font-size: 40px; font-weight: 700; margin-bottom: 16px;
+  background: linear-gradient(90deg, #c9a961, #f0d589, #c9a961);
+  background-size: 200% auto; -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; animation: shimmer 3s linear infinite;
+}
+.author-card .bio { color: rgba(250, 247, 240, 0.8); font-size: 16px; max-width: 600px; margin: 0 auto 24px; line-height: 1.8; }
+.author-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+.author-tag {
+  padding: 8px 20px; border-radius: 999px; background: rgba(201, 169, 97, 0.1);
+  border: 1px solid rgba(201, 169, 97, 0.3); color: #f0d589; font-size: 14px;
+}
+.supervisors { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; max-width: 800px; margin: 0 auto; }
+.supervisor-card {
+  background: rgba(13, 27, 42, 0.6); border-radius: 16px; padding: 32px; text-align: center;
+  border: 1px solid rgba(201, 169, 97, 0.3);
+}
+.supervisor-icon { font-size: 40px; margin-bottom: 12px; }
+.supervisor-card p { color: #c9a961; font-size: 14px; margin-bottom: 8px; }
+.supervisor-card h4 { font-family: 'Amiri', serif; font-size: 24px; font-weight: 700; color: #faf7f0; }
+.quote { margin-top: 64px; text-align: center; }
+.quote p {
+  font-family: 'Amiri', serif; font-size: 20px; color: #f0d589; font-style: italic;
+  max-width: 700px; margin: 24px auto 0; line-height: 1.8;
+}
+
+/* قسم التواصل */
+.contact { background: linear-gradient(180deg, #faf7f0 0%, #f5ecd9 100%); text-align: center; }
+.download-btn {
+  display: inline-flex; align-items: center; gap: 12px; padding: 16px 32px;
+  border-radius: 999px; text-decoration: none; margin-bottom: 48px;
+  background: linear-gradient(135deg, #0d1b2a, #1b2d4a); color: #f0d589;
+  font-family: 'Cairo', sans-serif; font-weight: 600; border: 1px solid #c9a961;
+}
+.contact-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; }
+.contact-card { background: white; border-radius: 16px; padding: 24px; border: 1px solid #e6d9b8; }
+.contact-icon { font-size: 32px; margin-bottom: 12px; }
+.contact-card h4 { font-family: 'Amiri', serif; font-weight: 700; color: #0d1b2a; margin-bottom: 8px; }
+.contact-card p { color: #5a4a35; font-size: 14px; }
+
+/* الفوتر */
+footer {
+  padding: 48px 24px; text-align: center;
+  background: linear-gradient(180deg, #0a0f1c 0%, #0d1b2a 100%);
+  border-top: 1px solid rgba(201, 169, 97, 0.3); color: #faf7f0;
+}
+footer p { color: rgba(250, 247, 240, 0.6); font-size: 14px; margin-bottom: 8px; }
+.footer-logo { font-family: 'Amiri', serif; font-size: 20px; font-weight: 700; color: #c9a961; margin-bottom: 24px; }
+
+/* زر العودة للأعلى */
+.back-top {
+  position: fixed; bottom: 32px; left: 32px; z-index: 50;
+  width: 56px; height: 56px; border-radius: 50%; border: none; cursor: pointer;
+  background: linear-gradient(135deg, #c9a961, #f0d589); color: #0d1b2a;
+  font-size: 24px; box-shadow: 0 10px 30px rgba(201, 169, 97, 0.4);
+  display: none;
+}
+
+/* الاستجابة */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hero-info { gap: 24px; }
+  .hero-info-divider { display: none; }
+  section { padding: 64px 24px; }
+  .section-title h2 { font-size: 36px; }
+}
+</style>
+</head>
+<body>
+
+<!-- شريط التنقل -->
+<nav id="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <div class="nav-logo-icon">✦</div>
+      <span class="nav-logo-text">القيادة الإدارية</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">الرئيسية</a></li>
+      <li><a href="#about">عن المذكرة</a></li>
+      <li><a href="#chapters">الفصول</a></li>
+      <li><a href="#institute">المعهد</a></li>
+      <li><a href="#author">الباحثة</a></li>
+      <li><a href="#contact">تواصل</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- القسم الرئيسي -->
+<section class="hero" id="home">
+  <div class="hero-frame"></div>
+  <div class="hero-content">
+    <div class="hero-badge">✦ الجمهورية الجزائرية الديمقراطية الشعبية</div>
+    <p class="hero-institution">وزارة التكوين والتعليم المهنيين</p>
+    <p class="hero-institute-name">المعهد الوطني المتخصص في التكوين المهني – الشهيد كرار مولود بئر خادم</p>
+    <div class="hero-ornament">✦ ❖ ✦</div>
+    <h1 class="hero-title">القيادة الإدارية</h1>
+    <p class="hero-subtitle">ودورها في تحسين أداء الموظفين</p>
+    <div class="hero-info">
+      <div class="hero-info-item">
+        <p class="hero-info-label">من إعداد</p>
+        <p class="hero-info-value">مزوار وفاء</p>
+      </div>
+      <div class="hero-info-divider"></div>
+      <div class="hero-info-item">
+        <p class="hero-info-label">التخصص</p>
+        <p class="hero-info-value">تسيير الموارد البشرية</p>
+      </div>
+      <div class="hero-info-divider"></div>
+      <div class="hero-info-item">
+        <p class="hero-info-label">دفعة</p>
+        <p class="hero-info-value">فيفري ٢٠٢٧</p>
+      </div>
+    </div>
+    <a href="#about" class="hero-btn">اكتشف المذكرة ↓</a>
+  </div>
+</section>
+
+<!-- عن المذكرة -->
+<section class="about" id="about">
+  <div class="section-container">
+    <div class="section-title">
+      <div class="section-ornament">✦</div>
+      <h2>عن المذكرة</h2>
+      <p>مذكرة نهاية التكوين لنيل شهادة تقني سامٍ في تسيير الموارد البشرية</p>
+    </div>
+    <div class="about-card">
+      <p>تشكّل القيادة الإدارية الركيزة الأساسية لنجاح أي منظمة في عصرنا الحديث، إذ لم يعد يُنظر إلى القائد باعتباره مجرد مسؤول عن إصدار الأوامر ومراقبة التنفيذ، بل أصبح يُعتبر المحرّك الرئيسي للطاقات والإمكانات داخل المنظمة.</p>
+      <p>تتناول هذه المذكرة العلاقة الجوهرية بين القيادة الإدارية وأداء الموظفين، من خلال إطار نظري شامل يربط بين المفاهيم والنظريات والممارسات الحديثة في هذا المجال الحيوي.</p>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">📚</div>
+        <h3>دراسة شاملة</h3>
+        <p>تتناول القيادة الإدارية من منظور أكاديمي شامل.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🎯</div>
+        <h3>ربط بالواقع</h3>
+        <p>تركز على العلاقة بين القيادة وأداء الموظفين.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">💡</div>
+        <h3>نظريات حديثة</h3>
+        <p>تستعرض أحدث النظريات القيادية المعاصرة.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">👥</div>
+        <h3>تركيز على الإنسان</h3>
+        <p>تؤمن بأن القيادة رسالة قبل أن تكون منصباً.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- الفصول -->
+<section class="chapters" id="chapters">
+  <div class="section-container">
+    <div class="section-title">
+      <div class="section-ornament">✦</div>
+      <h2>فصول المذكرة</h2>
+      <p>هيكل البحث الأكاديمي للمذكرة</p>
+    </div>
+    <div class="chapter-tabs">
+      <div class="chapter-tab active" onclick="showChapter(0)">الفصل الأول</div>
+      <div class="chapter-tab" onclick="showChapter(1)">الفصل الثاني</div>
+    </div>
+    <div id="chapter-content" class="chapter-content"></div>
+    <div style="text-align: center; margin-top: 48px;">
+      <div style="display: inline-block; padding: 16px 32px; border-radius: 16px; background: rgba(201, 169, 97, 0.1); border: 1px solid rgba(201, 169, 97, 0.3);">
+        <p style="color: #f0d589; font-family: 'Amiri', serif; font-size: 20px;">✦ خاتمة عامة: النتائج والتوصيات والملاحق ✦</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- المعهد -->
+<section class="institute" id="institute">
+  <div class="section-container">
+    <div class="section-title">
+      <div class="section-ornament">✦</div>
+      <h2>المؤسسة التعليمية</h2>
+      <p>المعهد الوطني المتخصص في التكوين المهني</p>
+    </div>
+    <div class="institute-images">
+      <div class="institute-img">
+        <img src="images/institute-1.jpg" alt="المعهد الوطني المتخصص في التكوين المهني">
+      </div>
+      <div class="institute-img">
+        <img src="images/institute-2.jpg" alt="بوابة المعهد">
+      </div>
+    </div>
+    <div class="institute-info">
+      <div class="info-card">
+        <div class="info-icon">🏛️</div>
+        <h3>المؤسسة</h3>
+        <p>المعهد الوطني المتخصص في التكوين المهني</p>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">🎓</div>
+        <h3>التخصص</h3>
+        <p>تسيير الموارد البشرية</p>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">📍</div>
+        <h3>الموقع</h3>
+        <p>الشهيد كرار مولود – بئر خادم</p>
+      </div>
+    </div>
+    <div style="text-align: center;">
+      <div class="company-box">
+        <p>الهيئة المستقبلة</p>
+        <h3>شركة Work Tel</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- الباحثة -->
+<section class="author" id="author">
+  <div class="section-container">
+    <div class="section-title">
+      <div class="section-ornament">✦</div>
+      <h2>الباحثة والمشرفون</h2>
+    </div>
+    <div class="author-card">
+      <div class="author-avatar">👤</div>
+      <p>من إعداد</p>
+      <h3>مزوار وفاء</h3>
+      <p class="bio">مربّصة بمعهد الشهيد كرار مولود – بئر خادم، تخصص تسيير الموارد البشرية، أنهت تدريبها بمؤسسة Work Tel.</p>
+      <div class="author-tags">
+        <span class="author-tag">تسيير الموارد البشرية</span>
+        <span class="author-tag">دفعة فيفري ٢٠٢٧</span>
+      </div>
+    </div>
+    <div class="supervisors">
+      <div class="supervisor-card">
+        <div class="supervisor-icon">👩‍🏫</div>
+        <p>المؤطرة</p>
+        <h4>قوقام فريال</h4>
+      </div>
+      <div class="supervisor-card">
+        <div class="supervisor-icon">👨‍🏫</div>
+        <p>المشرف</p>
+        <h4>صديقي عبد الفاتح</h4>
+      </div>
+    </div>
+    <div class="quote">
+      <div class="section-ornament">❖</div>
+      <p>"القائد الحقيقي لا يُقاس بما يحققه في حياته فحسب، بل بما يتركه بعده. الإرث الحقيقي للقائد ليس في المباني التي بناها، ولا في الأرباح التي حققها، بل في الناس الذين طورهم، والقيم التي غرسها."</p>
+    </div>
+  </div>
+</section>
+
+<!-- التواصل -->
+<section class="contact" id="contact">
+  <div class="section-container">
+    <div class="section-title">
+      <div class="section-ornament">✦</div>
+      <h2>الحصول على المذكرة</h2>
+      <p>يمكنكم الاطلاع على المذكرة الكاملة أو التواصل مع الباحثة</p>
+    </div>
+    <a href="memoire_leadership_final_Wafa_Mezouar.pdf" download class="download-btn">⬇ تحميل المذكرة PDF</a>
+    <div class="contact-cards">
+      <div class="contact-card">
+        <div class="contact-icon">📧</div>
+        <h4>التواصل</h4>
+        <p>للتواصل المباشر مع الباحثة</p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">📖</div>
+        <h4>المذكرة</h4>
+        <p>٥٥ صفحة من المحتوى الأكاديمي</p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">⬇</div>
+        <h4>التحميل</h4>
+        <p>تنزيل نسخة PDF كاملة</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- الفوتر -->
+<footer>
+  <div class="footer-logo">✦ القيادة الإدارية ✦</div>
+  <p>© ٢٠٢٧ - جميع الحقوق محفوظة لـ مزوار وفاء</p>
+  <p style="color: #c9a961; font-family: 'Amiri', serif;">✦ ❖ ✦</p>
+</footer>
+
+<button class="back-top" id="backTop" onclick="scrollToTop()">↑</button>
+
+<script>
+// شريط التنقل
+window.addEventListener('scroll', function() {
+  const navbar = document.getElementById('navbar');
+  const backTop = document.getElementById('backTop');
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+  if (window.scrollY > 500) {
+    backTop.style.display = 'block';
+  } else {
+    backTop.style.display = 'none';
+  }
+});
+
+// الفصول
+const chapters = [
+  {
+    sections: [
+      {
+        name: 'المبحث الأول: ماهية القيادة الإدارية',
+        items: ['المطلب الأول: مفهوم القيادة الإدارية', 'المطلب الثاني: أهمية القيادة الإدارية', 'المطلب الثالث: خصائص القيادة الإدارية']
+      },
+      {
+        name: 'المبحث الثاني: أنماط وصفات القيادة الإدارية',
+        items: ['المطلب الأول: أنماط القيادة', 'المطلب الثاني: مهارات القيادة الإدارية ووظائفها', 'المطلب الثالث: صفات القائد الإداري']
+      }
+    ]
+  },
+  {
+    sections: [
+      {
+        name: 'المبحث الأول: الأداء وتقييمه',
+        items: ['المطلب الأول: مفهوم الأداء والعوامل المؤثرة عليه', 'المطلب الثاني: مفهوم تقييم الأداء وأهميته', 'المطلب الثالث: طرق وأساليب تقييم الأداء']
+      },
+      {
+        name: 'المبحث الثاني: آليات تأثير القيادة الإدارية في تحسين أداء الموظفين',
+        items: ['المطلب الأول: دور القيادة الإدارية في تحفيز الموظفين', 'المطلب الثاني: أثر القيادة الإدارية في تنمية مهارات وكفاءات الموظفين', 'المطلب الثالث: دور القيادة الإدارية في تعزيز الرضا الوظيفي وتحقيق الأهداف التنظيمية']
+      }
+    ]
+  }
+];
+
+function showChapter(index) {
+  document.querySelectorAll('.chapter-tab').forEach((tab, i) => {
+    tab.classList.toggle('active', i === index);
+  });
+  const content = document.getElementById('chapter-content');
+  content.innerHTML = chapters[index].sections.map((section, sIndex) => `
+    <div class="chapter-card">
+      <div class="chapter-card-header">
+        <div class="chapter-card-num">${sIndex + 1}</div>
+        <h3>${section.name}</h3>
+      </div>
+      <ul>
+        ${section.items.map(item => `<li><span>▼</span><span>${item}</span></li>`).join('')}
+      </ul>
+    </div>
+  `).join('');
+}
+
+// عرض الفصل الأول عند التحميل
+showChapter(0);
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>
